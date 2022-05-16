@@ -22,9 +22,19 @@ Principal agilidade do Cloud está ligado com o time DevOps, o Cloud te dá agil
 
 6.Scalability: É uma vantagem do cloud escalar de uma forma simples, se sua aplicação não foi desenvolvida para rodar levando em conta os pontos anterior a sua aplicação é para cloud e voce pode ter problemas. É possivel escalar seu serviço sobre demanda (Ex: Serviço para rodar durante Black Friday). E paga pelo recursos que voce usa!. Se voce precisar 2,3,4, 5 ou mais servidores é muito rapido do cloud. Porem sua aplicação precisa ter se sido desenhada (desenvolvida) para esse tipo de ambiente.
 
+Agente de Backup - Agendado. Como que sua aplicação vai entender que voce tem 3 ou 4 servidor disparando ao mesmo tempo tarefas ao mesmo tempo.
+
 Ex:
 
-Agente de Backup - Agendado. Como que sua aplicação vai entender que voce tem 3 ou 4 servidor disparando ao mesmo tempo tarefas ao mesmo tempo.
+Elastico ou Infinito? O Elastico se esticar muito ele para e se continuar esticando ele quebra.
+
+A elasticidade tem um limite, algumas vezes poder ser um limite por um 'software limite' (Ex: EC2 voce pode rodar 30 durante um mes) se voce precisar de mais voce solicita (ticket) para a AWS e eles pode aumentar isso para sua empresa, isso é controle de segurança, que poder ser alterado.
+
+Mas existe um outro limite que é o 'Hardware Limite' que isso não pode ser aumentado ou alterado para sua empresa, não se pode mexer, quando chegar no limite do datacenter da AWS não pode ser alterado. O serviço nem sempre vai estar disponivel para se ele atingir o limite de hardware.
+
+Ex: Voce vai em uma loja e não encontra um produto. Não tem que ser feito.
+
+Por isso é importante o planejamento. 
 
 7.Cost and Elasticity: Gerenciar melhor isso no cloud pagar pelo que uso sobre demanda. So pago se a maquina estiver ativa.
 
@@ -33,10 +43,4 @@ Muitos clientes por não sabe usar o cloud e não entender a sua necessidade, ac
 Single Intancias. (Monolito) .
 
 Se voce fizer direito de acordo com cloud.
-
-
-
-
-
-
 
