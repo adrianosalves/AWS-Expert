@@ -36,11 +36,54 @@ Ex: Voce vai em uma loja e não encontra um produto. Não tem que ser feito.
 
 Por isso é importante o planejamento. 
 
-7.Cost and Elasticity: Gerenciar melhor isso no cloud pagar pelo que uso sobre demanda. So pago se a maquina estiver ativa.
+**7.Cost and Elasticity:** Gerenciar melhor isso no cloud pagar pelo que uso sobre demanda. So pago se a maquina estiver ativa.
 
 Muitos clientes por não sabe usar o cloud e não entender a sua necessidade, achando que o Cloud é mais barato e ele não é mais barato.
 
 Single Intancias. (Monolito) .
 
 Se voce fizer direito de acordo com cloud.
+
+# The National Intitute of Standard and Technology
+
+**.On demanda seft-service:** 
+
+Voce provisicona quando precisa e usa quando precisa isso é uma vantagem.
+
+**.Broad network access:** 
+
+Acesso a uma rede distribuidad de cosias.
+
+**.Resource pooling:** 
+
+Pooling de recursos que voce usa, quando precisar, existe um catalogo de recursos.
+
+**.Rapid elasticity:** 
+
+Velocidade rapida para crescer é verdade é possivel.
+
+**.Measured service:** 
+
+O serviço precisa ser medido para saber o estado de saude, saber onde houve falhas dos serviços eu preciso coletar metricas e ter opcoes de ferramentas endpoint para obter essas informacoes.
+
+# Deployment models
+
+Esse são os principais que todas especialista de cloud preisa conhecer
+
+**1. Private Cloud**: Cloud Privado implantado dentro da empresa (Open Stack, VMware, Zen) é o cloud que é seu não permite acesso de outras pessoas e outras empresas a seu cloud. On-Premise (VMs)
+
+**2. Public Cloud**: Qualquer um pode usar, voce contrata e usa (AWS, Google Cloud, Azure). Isso não significa que elas vão ter acesso a sua infraestrtura.
+
+**3. Hybrid Cloud**: On-Premise´e Public dentro da sua empresa, uma parte na AWS e outra dentro de sua empresa.
+
+**Multicloud**: Roda todos seus serviços em todos os Clouds (AWS, Google Cloud, Azure), existe varias confusões sobre o uso do termo, Business Continue porem não é uma solução muito utilizado, alguns usam com Desaster Recovery. Não chega a ser considerado Multicloud pois não está enviando requisições para os dois ao mesmo tempo.
+
+**Community**: Empresa se reuniem para usar o mesmo Cloud usando um pouco das duas On-Premise´e Public e convidam outras empresas a utilizar a mesma infraestrutura.
+
+
+
+
+
+# Service Models
+
 
