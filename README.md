@@ -3,13 +3,18 @@
 # Provedores - CSP
 
 **1. AWS Amazon Web Services** 33%: Lidernça nas Plataformas em nuvens
+
 **2. Microsoft Azure** 18%: 
+
 **3. Google Cloud Platform - GCP** 9%
+
 
 Outros...
 
 **4. Alibaba Cloud**
+
 **5. Oracle Cloud**
+
 **6. IBM Cloud**
 
 # What is Cloud (O que é Cloud)?
