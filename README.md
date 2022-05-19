@@ -1,5 +1,17 @@
 # AWS-Expert
 
+# Provedores - CSP
+
+**1. AWS Amazon Web Services** 33%: Lidernça nas Plataformas em nuvens
+**2. Microsoft Azure** 18%: 
+**3. Google Cloud Platform - GCP** 9%
+
+Outros...
+
+**4. Alibaba Cloud**
+**5. Oracle Cloud**
+**6. IBM Cloud**
+
 # What is Cloud (O que é Cloud)?
 
 Rodar nossos serviços ou produtos em algum lugar e oferecer com plataforma para alguem, que seja possivel escalar de uma forma legal, ter uma certa elasticidade porem alguns muita dúvida sobre esse conceito, existe algumas caracteristica que considera ser cloud computing ex: Amazon AWS o EC2 (Maquina Virtual). E outras empresa como microsoft co o Azure, e a Google Cloud.
