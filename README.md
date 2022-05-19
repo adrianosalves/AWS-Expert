@@ -21,6 +21,14 @@ Outros...
 
 Rodar nossos serviços ou produtos em algum lugar e oferecer com plataforma para alguem, que seja possivel escalar de uma forma legal, ter uma certa elasticidade porem alguns muita dúvida sobre esse conceito, existe algumas caracteristica que considera ser cloud computing ex: Amazon AWS o EC2 (Maquina Virtual). E outras empresa como microsoft co o Azure, e a Google Cloud.
 
+Computação em nuvem é o forncecimento de serviçs de computação, incluindo servidores, armazenamento, banco de dados, rede, software, analise e inteligencia, pela internet para oferecer recursos felxeiveis e economia de escala.
+
+Oferecer um datacenter e pagar conforme o uso...
+
+**E a contratacao?**
+
+Normalmente se paga apenas pelos serviços de nuvem em uso, ajudando a reduzir os custos operacionais conforme as necessidades da empresa.
+
 # Characteristics and Advantages
 
 **1.Agility (Agilidade):** Os times sempre foram ageis com ferramentas, Time Dev: Entregar codigo, porem com tempo foi exigido mais velocidade na entrega de produto mais agil e melhor (Qualidade e Entrega), speedy to markenting e etc.... Time Operação: Cuida da parte fisica, com o tempo o conceito de DevOps comecou a integrar o time de operacoes com o Cloud, agilidade em entrega de maquina EC2 com cloud Público. Principal agilidade do Cloud está ligado com o time DevOps, o Cloud te dá agilidade, você não precisa lidar com aspecto fisico infraestrtura (Datacenter local - custo alto).
@@ -83,9 +91,18 @@ Cloud não é so publicar uma maquina na Internet (Cloud) existe varios modelos 
 
 **IaaS (Infraestrtura como Serviço)**: Quando saiu o conceito de cloud, EC2 (AWS Amazon) é um exemplo, usar uma computador, banco de dados sendo disponibilizada como serviço.
 
-**PaaS (Plataforma como serviço)**: Voce pode usar um produto sem precisar se preocupar com a Infraestrutura alguns exemplos (Google Drive, Office 365, Hotmail e etc...). 
+A categora mais básica de serviços de computacao em nuvem. Com o IaaS, voce aluga a infraestrtua de TI, (que inclui servidores e maquinas virtuais, armazenamento (VMs), rede e sistemas operacionais), de um provedor de nuvem, com pagamento conforme o uso.
 
-**FaaS (Funções como Serviço**): É adeia de um produto granular, fazer um micro serviço como função, exemplo preciso enviar um e-mail de forma automatica atraves de um simples script (um codigo). 
+**PaaS (Plataforma como serviço)**: A nuvem configura para voce (Servidor, Rede e Banco de Dados) não precisando se envolver com a Infraestrutura.
+
+Oferece serviços de computacao em nuvem sob demanda para desenvolvimento, teste e gerenciamento de aplicativos de software. 
+Cuida de toda a configuracao e gerencia da infraestrutura dos servidores , armazenamento, rede e bancos de dados necessarios para desenvolvimento.
+
+**SaaS (Software como serviço)**: Voce pode usar um produto sem precisar se preocupar com a Infraestrutura alguns exemplos (Google Drive, Office 365, Hotmail e etc...). 
+
+É um metodo para distribuição de aplicativos de software pela Internet sob demanda normalmente baseado em assinaturas. O SaaS permite que os usuarios conectem o aplicativo pela internet, normalmente com um navegador da Web em seu telefone,tablet ou PC.
+
+**FaaS (Funções como Serviço**): É adeia de um produto mais granular, fazer um micro serviço como função, exemplo preciso enviar um e-mail de forma automatica atraves de um simples script (um codigo). 
 
 # Deployment models
 
