@@ -1,5 +1,7 @@
 # AWS-Expert
 
+# DIA 1 - Treinamento
+
 # Provedores - CSP
 
 **1. AWS Amazon Web Services** 33%: Lidernça nas Plataformas em nuvens
@@ -118,3 +120,35 @@ Esse são ass principais que todas especialista de cloud precisa conhecer
 **Multicloud**: Roda todos seus serviços em todos os Clouds (AWS, Google Cloud, Azure), existe varias confusões sobre o uso do termo, Business Continue porem não é uma solução muito utilizado, alguns usam com Desaster Recovery. Não chega a ser considerado Multicloud pois não está enviando requisições para os dois ao mesmo tempo.
 
 **Community**: Empresa se reuniem para usar o mesmo Cloud usando um pouco das duas On-Premise´e Public e convidam outras empresas a utilizar a mesma infraestrutura.
+
+# DIA 2 - Treinamento
+
+**Foundation**: Fundação para gerenciar suas contas dentro da AWS para administrar seus recursos na nuvem.
+
+**Root Accounts, part 1**: É a primeira conta que criamos na AWS a nossa conta principal e por ela que adicionamos nosso cartão de credito para que a AWS cobre os serviços usado na nunvem.
+
+**Root Accounts, part 2**: E atraves dela criamos as sub-accounts para dividir meu ambiente da AWS, e gerenciamos outras contas, quando dividimos nosso ambiente com sub-accounts fica mais organizado, e mais seguro usar sempre as sub-accounts para acessar nosso ambiente, e deixar a Root Accounts apenas para fazer os pagamentos.
+
+**Organization Unit (OU)**: As Organization Unit (OU) serve para organizar e criar politicas e criars regras organizacional. (Dev, Producao e etc...), assim podemos limitar usos dos recursos (Por Zonas, Uso de ECS e etc...) atraves de politicas. Poucas pessoas usam e isso é uma boa prática para segurança.
+.
+**AWS Accounts, part 1:** Se tiver sub-accounts então será necessário usar uma 'Organization Unit (OU)'. Caracterias de Root Account voce precisa de um e-mail único.
+
+**AWS Accounts, part 2:** Necessário ter uma conta (Nome e e-mail), use o email do time (ex: financeiro@empresa.com). Crie um e-mail valido que uma pessoas vai ler. Cada conta vai ter um gerenciador de identidade.  Os resources (são os recursos que voce usa na nuvem para cada conta).
+
+**Creatinf Account, parte 1**: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
