@@ -135,7 +135,27 @@ Esse são ass principais que todas especialista de cloud precisa conhecer
 
 **AWS Accounts, part 2:** Necessário ter uma conta (Nome e e-mail), use o email do time (ex: financeiro@empresa.com). Crie um e-mail valido que uma pessoas vai ler. Cada conta vai ter um gerenciador de identidade.  Os resources (são os recursos que voce usa na nuvem para cada conta).
 
-**Creatinf Account, parte 1**: 
+**Create Account, parte 1**: Será necessário um cartão de crédito.
+
+**Free Tier**: 
+
+750hs de EC2 - T2.MICRO
+S3 - 5gb
+etc...
+
+**Creating Account, part 3**: ...
+
+**Creating Account, part 4**: criou uma máquina EC2
+
+**My Security Credentials**: Ativar o MFA na conta Root.
+** As ORganizatiobs:* li
+
+
+
+
+
+
+
 
 
 
