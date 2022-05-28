@@ -1113,3 +1113,9 @@ Certificações AWS - Exames para validar seu conhecimento com um credencial con
 https://aws.amazon.com/certification
 
 
+# Prova da AWS - Disponivel em português / Da para voce tradutor para o idioma original
+
+# Saiba mais:
+
+
+
