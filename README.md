@@ -460,6 +460,53 @@ Dica: Latencia é importante por isso (Edge Location), cloudFront
 
 # Faturamento e Preço:
 
+# Como voce paga pela AWS?
+
+- Pagamento por utilizacao.
+- Economia quando fazer reserva: Por demanda por exemplo 3 anos
+- Pague menos usando mais. 
+
+# Calculadora de preco AWS
+
+Servicos, recursos e Regiao e etc...
+
+# Conceito de Preço
+
+Computação
+- Cobrada por hora/
+- Vria por tipo da instancia
+
+Armazanemanto
+- Cobrado geralmente por GB
+
+Tranasferencia de dados
+- A saida...
+- Cobrado geralmente por GB
+
+# Suporte Básico
+
+**Suporte básico (basic support)** é gratuito para todos os clientes AWS e inclui acesso a:
+- Documentos tecnicos, documentos e comunidade de suporte
+- AWS Personal Health Dashboards
+- Uma selecao entrada de verificacoes da AWS Trusted Advisor.
+
+# Planos do AWS Support
+
+Desenvolvedor (Developer)
+- Orientacoes de praticas recomendadas
+- Ferrametas de diagnosticos do lado do cliente
+- Suporte a contrucao da arquitetura
+
+# Gerente tecinico de conta (TAM)
+
+O **Gerente tecnico de conta (Technical Account Manager - TAM)** e seu ponto de contato principal na AWS.
+
+- Os gerente tecnicos de cona estao incluso apenas nos planos de suporte empresarial.
+- Fornece orientacao , conhecimento tecnico e praticas
+
+
+
+
 # RESUMO DO CONTEÚDO – AWS CERTIFIED CLOUD PRACTITIONER
 
 Esse é um resumo do conteúdo para o exame AWS Certified Cloud Practitioner. Não é nenhum conteúdo oficial, apenas uma orientação dos principais conceitos de Cloud concepts, Security and compliance, Technology e Billing and Pricing.
