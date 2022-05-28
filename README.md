@@ -1098,10 +1098,18 @@ X-ray: analise e depure aplicações distribuídas em produção. Codestar: dese
 
 OpsWorks: é um serviço de gerenciamento de configurações que oferece instâncias gerenciadas do Chef e do Puppet, permitindo automatizar a forma como os servidores são configurados, implantados e gerenciados em instâncias do Amazon EC2 ou ambientes de computação no local. O OpsWorks tem três ofertas, AWS OpsWorks for Chef Automate, AWS OpsWorks for Puppet Enterprise e AWS OpsWorks Stacks.
 
+# Aprendendo nuve com a AWS
 
+Treinamento Digitais - Gratuitos, cursos online e sob demandas constuidos pelo time de experts da AWS
 
+https://skillbuilder.aws
 
+Treinamento de Sala de aula - Classes ministradas por instrutores
 
+https://aws.amazon.com/training
 
+Certificações AWS - Exames para validar seu conhecimento com um credencial conhecida no mercado
+
+https://aws.amazon.com/certification
 
 
