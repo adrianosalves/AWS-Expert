@@ -199,12 +199,15 @@ Cliente: Na nuvem
 - Criptografia de dados no lCriptografia de dados no lado clienteado Servidor
 - Proteção do trafefo de rede
 
+Responabilidade sua: A segurança e configuração e sua....
+
 AWS: Da Nuvem
 - Software
 - Computação, Armazenamento, Banco de Dados, Rede
 - Hadware, Infraestrutura global da AWS
 - Regiões, Zonas de disponibilidade, Locais de borda (Edge Locations)
 
+Responabilidade sua:
 
 # AWS Identfy and Acess Management (IAM)
 
@@ -213,6 +216,10 @@ IAM Permite permite gerenciar o aceso a serviços e recursos AWS: Usuarios, Role
 Usuarios precisa acessar um determinado ambiente precisa ter um conjunto de permissões, **mas e sua equipe grupo de usario precisa ter acesso ao mesmo conteudo?** Existe um recurso chamado 'Grupo' onde voce adicionar todos esses usuarios herda as permissões. As preciso ter um acesso temporario para um determinado ambiente ou a um serviços para realizar ações porem não quero criar um usuario fixo? Voce pode criar uma 'Role' para um pessoa acessar as permissão dessa 'role e acessar temporariamente.
 
 Politica: É um documento que esta associado a um usuario, grupo ou role. O que não estiver dentro da politica não esta autorizado a acessar. Quando o DENY explicito substituir qualquerregra ALLOW.
+
+Role: Regra temporaria desde 15 min ou mais, não sendo necessário criar um usuario fixo, mais uma politica temporaria e atribui para outro usuario.
+
+Lambda: Executar um codigo sem um servidor.
 
 # Autenticação: quem é voce?
 
@@ -253,9 +260,213 @@ A AWS tem alguns serviço para proteger
 
 Standard ativo em todas contas por padrão.
 
-Advanced protege contra ataquer mais comus e mais na cama app
+Advanced protege contra ataquer mais comus e mais na camada da aplicação.
 
-# Dominio 3 Tecnologia
+# Dominio 3: Tecnologia
+
+Perguntas?
+
+Diferenca entre Security Group (Firewall nivel de placa de rede) e Network Next Firewall Lista (Nivel de Sub-net).
+
+# Regiões
+
+Um area geografica de nosso planeta isola com um conjunto de zona de disponibilidade (2 ou mais zonas de disponibilidade). 
+
+Cada região:
+
+- É completamente independente.
+
+- Usa a infraestrtura de rede AWS
+
+- Tem duas ou mais Zonas de disponibilidade
+
+# Zonas de disponibilidade
+
+As são Organizalidade por:
+
+- Data Centers e uma Região (um ou mais em cada AZ)
+
+- Projetadas para isolamento de falhas
+
+- Interconectadas usando links privados de alta disponibilidade
+
+- Usadas para alcançar alta disponibilidade
+
+Dicas: 
+
+# Locais de Bordas (Edge Location)
+
+Locais de borda
+
+- Executadas nas principais cidades do mundo.
+- Suporte a serviços da AWS como Route S3 e CloudFront.
+
+# O que é o Amazon EC2?
+
+Poder computacional na nuvem um servidor para minha apliação, banco de dados ou web e etc... Podemos pensar em usar o EC2.
+
+No EC2 podemos escolher o recurso que queremos provisionar.
+
+- Usar a capacidade comutacional segura e dimensionavel. (Memoria, Processador e HD)
+- Inicialize as instancias em minutos. (De acordo com usa necessidades, e escalar horizontal ou verticalmente).
+- Pague apenas pelo o que utilizar.
+
+# Amazon Elastic Block Store (EBS)
+
+- Armazenamento de bloco persistente para instancias
+- Protegendo por replicação
+- Diferentes tios de unidade
+- Aumentar ou diminuir em minutos
+- Pague apenas pela provisão
+- Funcionalidade de snapshot
+- Critptografia
+
+Nuvem AWS
+
+EC2  <-> EC2, EC2 EC2 (Volumes de Amazon EBS): Podemos ter mais de um volume associado a uma instancia EC2. 
+
+Solid State Driver (SSD)
+- Volumes de SSD de IOPS provisionado (io1, io2): Maior performance, compare com um carro de formula 1, porem apenas 1 piloto no carro
+- Volumes de SSD de uso geral (gp2, gp3): 
+ 
+Hard Disk Driver (HDD)
+- VOlumes de HDD com throughput otimizados (st1): Menor perfomance, comparamos o HD comparado a um onibus mas um volume maior de dados.
+- VOlumes de HDD Cold (sc1): 
+
+Lancar um instancia -> Conecte-se a instancia -> Usar a instancia...
+
+# Por que a escalabilidade é importante
+
+Vantagesns da nuvem é a capacidade elastica e escalar nossa infraestrutura.
+
+Como fazer isso?
+
+Necessário analisar sua aplicação em uso durante o uso na semana e analisar a capacidade não usada!
+
+Se eu provisiono os recursos pode ser que não consigo atender a demanda.
+
+Demanda + Capacidade?
+
+O Amazon **EC2 Auto Saling** ajusta a capacidade conforme necessário.
+
+- Aumente a escala para picos.
+- Reduza a escala horizontal em horario fora de pico
+- Substituir instancias com problemas.
+- Pague somente pelo que usar.
+
+Dica: Ele vai ter uma receita ou uma programacao (templat) minimo e o maximo de recursos.
+
+# Elasic Load Balancing: Ele força uma alta disponibilidade entre zonas  (AZs) de disponibilidade
+
+Distribuia automaticamente o tráfego entre arios destinos
+
+- Alta disponibilidade
+- verificações de integridade
+- Terminação SSL/TLS
+- Monitoramento operacional
+
+Elastic Load Balancing -> Instancia, Instancia, Instancia, Instancia, Instancia
+
+Dicas: EC2 Auto Scaling provisiona recursos dentro de um grupo de escalibidade, que vai enviar a comunicação para o ELB estarão integrados.
+
+# O que é o Amazon CloudWatch?
+
+Monitora
+- Recursos da AWS
+- Aplicações em execução na AWS
+
+Coleta e rastreia:
+- Metricas padrão
+- Metricas personalizadas
+
+Alarmes:
+- Enviar notificações
+- Fazer alterações automaticamente com base nas regiões que voce define
+
+Dica: CloudWatch se comunica com EC2 Auto Scalin e o EBL atraves de alarmes.
+
+# O que é o Amazon S3?
+
+- Os dados são armazenados como objetos em buckets
+- Armazenamento ilimitado
+  * Objeto único limitado a **5 TB**
+
+- 99,999999999% durável
+- Acesso granular a buckets e objetos: Forma customizada que pode controlar o acesso aos recursos no seu armazenamento.
+
+Dica: Armazenar fotos, centralizar logs e etc... É um serviço que primeito voce **define uma região** (Ele fica no minimo em 3 zonas de alta disponibilidade), e fica ate o momento que quiser retirar, depois voce escolhe um *local para armazenar* seus dados e local e chamado **'Buckets' (Balde)**. 
+
+# Classe de arqazenamento  / Recurso
+
+S3 Standard: 
+* 3 Zonas de disponibilidade
+
+S3 Standard - Infrequent Access (IA) : 
+* Taxa de recuperacao associada a objetos
+* Mas adequada para dados acessados com menos frequencia
+
+S3 Intelligent - Tiering: 
+* Move objetos automaticamente entre camadas com base nos padrães de acesso
+* 3 Zonas de disponibilidade
+
+One Zone -IA:
+* 1 Zonas de disponibilidade
+* Custo 20% menores que o S3...
+
+Como criar um bucket S3...
+
+
+# Faca voce mesmo X Servicos de Bacno de Dados Gerenciados
+
+Banco de dados no Amazon EC2
+- Acesso ao Sistema Operacional
+- Precisa de recursos de aplicações especificos
+
+
+Serviço de Banc de Dados AWS
+- Facil de configurar , gerenciar e manter
+- Alta disponibilidade com alguns cliques
+- Foco no desempleho
+
+
+
+# Amazon Relation Databse Services (RDS)
+
+opere escale um banco de dados relacional a nuvel AWS -> Automatiza tarefas administrativas 
+
+Mecanismo de banco de Dados RDS: Amazon Aurora, PostgreeSQl, MySQL, MariaDB, Oracle Databse, Microsoft SQL Server
+
+
+# Amazon Autora (Replicado 6x)
+
+Armazena dadso em um banco de dados ralcional corporativo 
+
+# Amazon DynamoDB - Serveless não relacional
+
+# Amazon Virtual Priate Cloud (Amazon VPC)
+
+Nuvem AWS -> Regiao -> VPC -> Intervalo de IPs da VPC -> 
+Zona de Disponibidalde A
+
+Sub-rede publica 
+Instancias
+. Internet Publica: Portao de entrada ao acessar (Internet Gateway). NACL controle de acesso. das sub-rede
+
+Sub-rede privada
+Instancias
+. DataCenter Corporativo: Não tem Uma rota direta para intenet publica. Imagine que voce tem um **porta para pessoas autorizadas (Instatess)** e para manter uma segurança coloquei um **Security Group** (Statefull).
+
+# Faturamento e Preço:
+
+
+
+
+
+
+
+
+
+
 
 
 
