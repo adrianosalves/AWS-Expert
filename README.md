@@ -151,6 +151,130 @@ etc...
 ** As ORganizatiobs:* li
 
 
+# Live ao Vivo
+
+## Conceito da Nuvem: Visão geral
+
+CloudFormation: Implante programatcamente a infraestrutura repetivel...
+
+Eastic Beanstalk: Implante sua aplicação da forma mais simples possivel (Php, Node etc...)
+
+Direct Connect: Forneça uma conexão de rede dedicada a paerti de seu local á AWS...
+
+Route 53: Execute Serviço DNS...
+
+Lambda: Execute o codigo sem gerenciar os servidores.
+
+CloudFront CDN: Entregue seu conteudo por uma rede com alta escala globalmente disposnivel.
+
+# Orientações:
+
+- No final tera um quiz 85% de desconto para concorrer ao voucher da AWS.
+
+- https://www.aws.training/Certification : Processo de sua certificação, será associado um ID da sua conta voce faz uma marcação (Online), 'Register for an exam', tera acesso ao Painel de Certificações. 
+
+## Dominio 2: Descrição do Exame
+
+2.1 Defina o modelo de responsabilidade shared da AWS
+2.2 Defina os conceitos de segurança e conformidade da nuvem AWS
+2.3 Identifique os recursos de gerenciamento de acesso da AWS
+2.4 
+
+
+# Segurança e nossa maior prioridade
+
+- Projetado para segurança:
+- Monitora constantemente: 
+- Altamente automatizado:
+- Altamente disponivel: Mesmo que tenha uma sobrecarga de recursos...
+- Altamente em conformidade: Regulamentações e Certificações 
+
+# Modelo de responsabilidade compartilhada da AWS
+
+Cliente: Na nuvem
+- Dados de cliente
+- Plataforma, aplicações, Identify and Acess Management: Acesso, permissionamento..
+- Confguraçẽs de sistema operacionais, rede e firewall: Security Group 
+- Criptografia de dados no lado Cliente
+- Criptografia de dados no lCriptografia de dados no lado clienteado Servidor
+- Proteção do trafefo de rede
+
+AWS: Da Nuvem
+- Software
+- Computação, Armazenamento, Banco de Dados, Rede
+- Hadware, Infraestrutura global da AWS
+- Regiões, Zonas de disponibilidade, Locais de borda (Edge Locations)
+
+
+# AWS Identfy and Acess Management (IAM)
+
+IAM Permite permite gerenciar o aceso a serviços e recursos AWS: Usuarios, Role, Grupo de Usuarios, Politica do IAM, Autenticação multifator (MFA).
+
+Usuarios precisa acessar um determinado ambiente precisa ter um conjunto de permissões, **mas e sua equipe grupo de usario precisa ter acesso ao mesmo conteudo?** Existe um recurso chamado 'Grupo' onde voce adicionar todos esses usuarios herda as permissões. As preciso ter um acesso temporario para um determinado ambiente ou a um serviços para realizar ações porem não quero criar um usuario fixo? Voce pode criar uma 'Role' para um pessoa acessar as permissão dessa 'role e acessar temporariamente.
+
+Politica: É um documento que esta associado a um usuario, grupo ou role. O que não estiver dentro da politica não esta autorizado a acessar. Quando o DENY explicito substituir qualquerregra ALLOW.
+
+# Autenticação: quem é voce?
+
+AWS CLI, SDKs da AWS, AWS Managemete Console: IAM (Usuarios, Grupo).
+
+login (usuario e senha)...
+
+# Autorização: O que pode fazer?
+
+Usuarios, grupo ou role do IAM --> (Politica IAM) Acesso Total, Somente Leitura,  --> AWS CLI, Bucket do Amazon S3
+
+# O que é o Amazon Inspector?
+
+Avaliação de Segurança automazada como um serviço
+
+- Avalia vulnerabilidades das aplicações
+
+- Produz uma lista detalhada de descobertas de segurança
+ 
+- Utiliza práticas recomendadas de segurança
+
+Dica: Usamos esse recursos para saber se meu ambiente está exposto de alguma maneira ou vulneravel, isso permite criar um agrupamento de recursos e formar uma analise para gerar relatorios e decidir de acordo com o resultado que medidas iremos tomar. É como se uma mae orientar um filho sobre os obstaculos que vamos encontrar.
+
+# O que é DDos?
+
+DDos -> Aplicação < x Usuario Legitimo
+
+Aplicação sofrendo um ataque distribuido visando a indisponibilidade do meu ambiente, existe ataques diferente de acordo com o modelo OSI, com o objetivo de derrubar um serviço, um servidor e etc...
+
+A AWS tem alguns serviço para proteger 
+
+# O que é o AWS Shilde?
+
+- Um serviço gerenciado de Protecao de DDosS
+- Detecção sempre ativa e mitgações
+- Integracao e implatacao continuas
+- Proteção economica e customizavel
+
+Standard ativo em todas contas por padrão.
+
+Advanced protege contra ataquer mais comus e mais na cama app
+
+# Dominio 3 Tecnologia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
