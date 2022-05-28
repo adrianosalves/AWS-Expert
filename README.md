@@ -738,7 +738,7 @@ No Auto Scaling dinâmico, pode criar alarmes no CloudWatch, com base nas inform
 
 Scaling horizontal: através do aumento no número de recursos, por exemplo, adicionando mais discos rígidos a uma array de armazenamento ou mais servidores para suportar um aplicativo).
 
-3.3. Network: Route 53
+# 3.3. Network: Route 53
 
 É um serviço de DNS projetado para rotear usuários finais a endpoints (que pode ser uma aplicação que precisa converter o nome de domínio em IP).
 
@@ -746,7 +746,7 @@ Entre as principais funções do Route 53: registro de domínio, DNS global e al
 
 As principais routing policies são Simple, Weighted, Latency based, Failover, Geo-location, Geo-Proximity, Multi-Value e Traffic Flow.
 
-3.4. Database RDS (Relational Database Service)
+# 3.4. Database RDS (Relational Database Service)
 
 É um serviço gerenciado que configura e opera um BD relacional na nuvem. Permite que você se concentre em performance, alta disponibilidade, segurança e compatibilidade necessárias.
 
@@ -760,7 +760,7 @@ Alta disponibilidade com Multi-AZ: gera uma cópia stand by da instância do BD 
 Réplicas de leitura: método de replicação assíncrona, onde são descarregadas consultas de leitura da instância de dados mestra. Ideal para cargas de trabalho do BD com uso intensivo de leitura.
 Os principais benefícios do RDS: altamente escalável, alta performance, fácil de administrar (console de gerenciamento AWS, CLI ou chamadas API), disponível e durável, seguro e compatível (controle e segurança via VPC ou não).
 
-3.5. Compute: Lambda
+# 3.5. Compute: Lambda
 
 É um serviço que permite executar código sem provisionar ou gerenciar recursos (serverless). Executa seu código somente quando necessário (orientada a eventos) e dimensiona automaticamente as solicitações.
 
@@ -768,7 +768,7 @@ O AWS Lambda está em uma infraestrutura altamente disponível (inclui manutenç
 
 O AWS Lambda pode ser usado em diversos aplicativos, tais como backup automatizados, objetos de processamento enviados para o S3, IoT, etc.
 
-3.6. Elastic Beanstalk
+# 3.6. Elastic Beanstalk
 
 É um PaaS, ou seja, você possui toda a infraestutura e plataforma criada para você, de modo a colocar o código da aplicação, conforme necessário. Permite a implementação rápida de seus aplicativos e reduz a complexidade de gerenciamento.
 
@@ -777,19 +777,21 @@ Basta fazer o upload de seu código e o Elastic Beanstalk se encarrega automatic
 AWS Elastic Beanstalk can be used to quickly deploy and manage applications in the AWS Cloud. However, you do still need to deploy within a VPC so more AWS expertise is required
 
 
-3.7. Simple Notification Service (SNS)
+# 3.7. Simple Notification Service (SNS)
 
 É um serviço de mensagens e comunicações móveis de publicação / assinatura (pub/sub) flexível e totalmente gerenciado. Também coordena a entrega de mensagens para endpoints e clientes assinantes.
 
 Permite desacolpar e ajustar a escala de microsserviços, sistemas distribuidos e aplicativos serverless. Eventos que disparam e-mail ao administrador, microsserviços que se comunicam entre si, etc.
 
 
-Os principais conceitos do SNS são:
+**Os principais conceitos do SNS são:**
 
 Topics: como rotula e agrupa diferentes pontos de extremidade para os quais envia mensagens.
 Subscriptions: os pontos de extremidade para os quais um tópico envia mensagens.
-Publishers: a pessoa / alarme / evento que envia ao SNS a msg a ser enviada.
-3.8. Management: Amazon CloudWatch
+
+**Publishers:** a pessoa / alarme / evento que envia ao SNS a msg a ser enviada.
+
+# 3.8. Management: Amazon CloudWatch
 
 Monitora seus recursos AWS e os aplicativos que você executa em tempo real (métricas como utlização de CPU, transferência de dados, etc.). O CloudWatch fornece dados e insights para monitorar aplicativos, responder às alterações de performance em todo o sistema, otimizar a utilização de recursos e obter uma visualização unificada da integridade operacional.
 
@@ -798,7 +800,7 @@ O CloudWatch coleta dados de monitoramento e operações na forma de logs, métr
 A capacidade de automaticamente reagir às mudanças é o principal recurso do CloudWatch. Os principais componentes do CloudWatch são: métricas, alarmes, eventos, logs e dashboards.
 
 
-3.9. Amazon CloudTrail
+# 3.9. Amazon CloudTrail
 
 É um serviço que possibilita governança, conformidade, auditoria e de riscos em sua conta da AWS. Permite registrar, monitorar continuamente e reter a atividade da conta relacionada às ações executadas na infraestrutura da AWS.
 
@@ -809,13 +811,13 @@ Qual é a diferença entre o CloudWatch Events e o AWS CloudTrail?
 
 Com o CloudWatch, você pode definir regras para monitorar eventos específicos e executar ações de maneira automática. O AWS CloudTrail é um serviço que registra chamadas de API / atividades da conta e entrega arquivos de log contendo chamadas de API para seu bucket do Amazon S3 ou um grupo de log do CloudWatch Logs, com o intuito de conformidade, auditoria e gestão de riscos.
 
-3.10. AWS Artifact
+# 3.10. AWS Artifact
 
 Portal gratuito de autoatendimento para acesso sob demanda aos relatórios de conformidade da AWS. Os relatórios de System & Organization Control (SOC) da AWS são relatórios de exame de terceiros independentes que demonstram como a AWS atende aos principais controles e objetivos de conformidade. O propósito desses relatórios é ajudar você e os seus auditores a entenderem os controles estabelecidos na AWS para apoiar as operações e a conformidade.
 
 O relatório SOC 1 e SOC 2 da AWS estão disponível para clientes da AWS por meio do AWS Artifact. Relatório de segurança, disponibilidade e confidencialidade SOC 3 da AWS, disponível publicamente como um whitepaper.
 
-3.11. Storage: CloudFront CDN (Content Delivery Network)
+# 3.11. Storage: CloudFront CDN (Content Delivery Network)
 
 É uma rede de entrega de conteúdo. Ao utilizar o CloudFront, você aproveita diversos edge locations espalhados pelo mundo para entregar conteúdo, garantido baixa latência na interação com os usuários através do uso de caches.
 
@@ -823,38 +825,48 @@ Está integrado a outros serviços AWS, tais como AWS WAF (Web Application Firew
 
 Casos de uso: armazenamento em cache de ativos estáticos, streaming de vídeo ao vivo e sob demanda, segurança e proteção contra DDoS e conteúdo dinâmico.
 
-3.12. Management: Amazon CloudFormation
+# 3.12. Management: Amazon CloudFormation
 
 Simplifica a tarefa de criar grupos de recursos relacionados a seus aplicativos. O foco é a automação do provisionamento de recursos.
 
 O CloudFormation lê o arquivo modelo (JSON ou YAML) e o output é o provisionamento de recursos (conhecido como pilha). Você pode criar, atualizar e excluir pilhas (stacks).
 
 
-4. ARQUITETURA
+# 4. ARQUITETURA
+
 Os cinco pilares são:
 
-Segurança: IAM, controles de detecção, resposta a incidentes, proteção de infraestrutura e dados. Aplica o princípio de privilégio mínimo e segurança em todas as camadas. Com o modelo de responsabilidade compartilhada, você foca na proteção dos dados da aplicação e SO (e a AWS oferece infraestrutura e serviços seguros).
-Confiabilidade: recuperar problemas/falhas (automaticamente), gerenciamento de alterações, previsão, resposta e prevenção de falhas.
+**Segurança:** IAM, controles de detecção, resposta a incidentes, proteção de infraestrutura e dados. Aplica o princípio de privilégio mínimo e segurança em todas as camadas. Com o modelo de responsabilidade compartilhada, você foca na proteção dos dados da aplicação e SO (e a AWS oferece infraestrutura e serviços seguros).
+
+**Confiabilidade:** recuperar problemas/falhas (automaticamente), gerenciamento de alterações, previsão, resposta e prevenção de falhas.
 Eficiência de performance: selecionar soluções personalizáveis para inovar continuamente (tecnologias avançadas, alcance global em minutos, arquitetura serverless, etc.) .
-Otimização de custos: refinamento e aprimoramento contínuo dos sistemas. Usar recursos econômicos, combinar oferta e demanda, conscientização sobre despesas e otimizar ao longo do tempo.
-Excelência operacional: gerenciar e automatizar alterações, responder a eventos e definir os padrões.
+
+**Otimização de custos:** refinamento e aprimoramento contínuo dos sistemas. Usar recursos econômicos, combinar oferta e demanda, conscientização sobre despesas e otimizar ao longo do tempo.
+
+**Excelência operacional:** gerenciar e automatizar alterações, responder a eventos e definir os padrões.
 Tolerância a falhas
 
 Capacidade de um sistema permanecer operacional
 Redundância integrada do componente de um aplicativo
-Os mecanismos de Disaster Recovery: o mais rápido é o Multi Site; o mais lento é Backup & Restore.
 
+**Os mecanismos de Disaster Recovery:** o mais rápido é o Multi Site; o mais lento é Backup & Restore.
 
-Os 5 pilares AWS Well-Architected Framework são:
+# Os 5 pilares AWS Well-Architected Framework são:
 
-Operational Excellence: perform operations as code, annotate documentation, make frequent, small and reversible changes, refine operations procedures frequently, anticipate failure e learn from all operational failures
-Security: implement a strong identity foundation, enable traceability, apply security at all layers, automate security best practices, protect data in transit and at rest e prepare for security events
-Reliability: test recovery procedures, automatically recover from failure, scale horizontally to increase aggregate system availability, stop guessing capacity e manage change in automation
-Performance Efficiency: democratize advanced technologies, go global in minutes, use serverless architectures, experiment more often e mechanical sympathy
-Cost Optimization: adopt a consumption model, measure overall efficiency, stop spending money on data center operations, analyze and attribute expenditure e use managed services to reduce cost of ownership
+**Operational Excellence:** perform operations as code, annotate documentation, make frequent, small and reversible changes, refine operations procedures frequently, anticipate failure e learn from all operational failures
+
+**Security:** implement a strong identity foundation, enable traceability, apply security at all layers, automate security best practices, protect data in transit and at rest e prepare for security events
+
+**Reliability:** test recovery procedures, automatically recover from failure, scale horizontally to increase aggregate system availability, stop guessing capacity e manage change in automation
+
+**Performance Efficiency:** democratize advanced technologies, go global in minutes, use serverless architectures, experiment more often e mechanical sympathy
+
+**Cost Optimization:** adopt a consumption model, measure overall efficiency, stop spending money on data center operations, analyze and attribute expenditure e use managed services to reduce cost of ownership
+
 Mais detalhes em: https://aws.amazon.com/pt/architecture/well-architected/
 
-5. SEGURANÇA
+# 5. SEGURANÇA
+
 Uma infraestrutura resiliente, projetada para alta segurança e proteções fortes (safe guards) para ajudar a proteger a privacidade dos clientes.
 
 Atenda aos requisitos de conformidade (automação centralizada, controle de segurança e supervisão adicional)
