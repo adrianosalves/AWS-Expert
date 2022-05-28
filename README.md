@@ -460,16 +460,16 @@ Dica: Latencia é importante por isso (Edge Location), cloudFront
 
 # Faturamento e Preço:
 
-RESUMO DO CONTEÚDO – AWS CERTIFIED CLOUD PRACTITIONER (PARTE I)
-June 18, 2020
+# RESUMO DO CONTEÚDO – AWS CERTIFIED CLOUD PRACTITIONER
+
 Esse é um resumo do conteúdo para o exame AWS Certified Cloud Practitioner. Não é nenhum conteúdo oficial, apenas uma orientação dos principais conceitos de Cloud concepts, Security and compliance, Technology e Billing and Pricing.
 
 Antes de seguir adiante nessa leitura, sugiro acessar o post AWS CLOUD PRACTITIONER – PREPARAÇÃO PARA O EXAME E SIMULADOS para entender melhor o formato do exame e o que será abordado. E assim, esse resumo está dividido em: Introdução a nuvem AWS, Core Services, Integrated Services, Arquitetura, Segurança, Definição de preço e suporte, outros serviços.
 
-1. INTRODUÇÃO A NUVEM AWS
+# 1. INTRODUÇÃO A NUVEM AWS
 Abordagem de alterações de gerenciamento, testes, confiabilidade e planejamento de capacidade é mais ágil e eficiente. A AWS é uma plataforma que oferece soluções em cloud flexíveis, confiáveis, escaláveis, fáceis de usar e econômicas.
 
-Reduzir riscos:
+# Reduzir riscos:
 
 Por ser capaz de aprender e adaptar-se rapidamente as mudanças (reduz o custo da mudança)
 Riscos de segurança por permitir testar com frequência e efetuar correções rápidas
@@ -493,7 +493,7 @@ Interface de linha de comando (CLI): permite controlar os serviços da AWS
 SDKs: permite acessar AWS utilizando linguagens de programação
 Os três utilizam como referência a API da AWS. Com as Interfaces AWS, há mais flexibilidade de criar e acessar os recursos em qualquer lugar.
 
-The 6 advantages of cloud are:
+# The 6 advantages of cloud are:
 
 Trade capital expense for variable expense
 Benefit from massive economies of scale
@@ -501,8 +501,9 @@ Stop guessing about capacity
 Increase speed and agility
 Stop spending money running and maintaining data centers
 Go global in minutes
-2. CORE SERVICES
-2.1. Compute: EC2 (Elastic Compute Cloud)
+
+# 2. CORE SERVICES
+## 2.1. Compute: EC2 (Elastic Compute Cloud)
 
 É um serviço que disponibiliza capacidade computacional segura e redimensionável na nuvem. A interface permite que você obtenha e configure a capacidade com o mínimo de esforço. Ele oferece controle total de seus recursos e permite trabalhar no ambiente das AWS. No EC2, o cliente gerencia a infraestrutura virtual das VMs (configuração do SO, patchs de segurança e rede).
 
@@ -521,30 +522,37 @@ Além disso, você pode combinar facilmente instâncias spot com instâncias sob
 
 Diferenças entre Spot Instances x On-Demand Instances
 
- 	Spot Instances	On-Demand Instances
+Spot Instances	On-Demand Instances
 Launch time	Can only be launched immediately if the Spot Request is active and capacity is available.	Can only be launched immediately if you make a manual launch request and capacity is available.
+
 Available capacity	If capacity is not available, the Spot Request continues to automatically make the launch request until capacity becomes available.	If capacity is not available when you make a launch request, you get an insufficient capacity error (ICE).
+
 Hourly price	The hourly price for Spot Instances varies based on demand.	The hourly price for On-Demand Instances is static.
 Instance interruption	You can stop and start an Amazon EBS-backed Spot Instance. In addition, the Amazon EC2 Spot service can interrupt an individual Spot Instance if capacity is no longer available, the Spot price exceeds your maximum price, or demand for Spot Instances increases.	You determine when an On-Demand Instance is interrupted (stopped, hibernated, or terminated).
+
 Para usar Instâncias spot, crie uma solicitação de Instância Spot que pode incluir o preço máximo que você está disposto a pagar por hora por instância (o padrão é o preço sob demanda) e outras limitações como o tipo de instância e a zona de disponibilidade. As instâncias spot são executadas até que você as interrompa ou encerre, ou até que o EC2 as interrompa.
 
 Quando usar Instâncias spot, você deverá estar preparado para interrupções. O EC2 poderá interromper a Instância spot quando o preço spot exceder o preço máximo, quando a demanda por Instâncias spot aumentar ou quando a oferta de Instâncias spot diminuir. Quando o EC2 interrompe uma Instância spot, ele fornece um aviso de interrupção de Instância spot, enviando à instância um aviso de dois minutos antes que o Amazon EC2 a interrompa.
 
-Spot instances: are good for short term requirements as they can be very economical. However, you may find that the instance is terminated if the spot market price moves
-On-Demand: is the best choice for this situation as it is the most economical option that will ensure no interruptions. Also when you want low cost and flexibility of EC2 without any up-front payment or long-term commitment.
-Reserved instances: are good for long-term, static requirements as you must lock-in for 1 or 3 years in return for a decent discount (applications with steady state or predictable usage).
-Dedicated instances: are EC2 instances that run on hardware dedicated to a single customer
+**Spot instances:** are good for short term requirements as they can be very economical. However, you may find that the instance is terminated if the spot market price moves
+
+**On-Demand:** is the best choice for this situation as it is the most economical option that will ensure no interruptions. Also when you want low cost and flexibility of EC2 without any up-front payment or long-term commitment.
+
+**Reserved instances:** are good for long-term, static requirements as you must lock-in for 1 or 3 years in return for a decent discount (applications with steady state or predictable usage).
+
+**Dedicated instances:** are EC2 instances that run on hardware dedicated to a single customer
 Uma AMI (Amazon Machine Image) fornece as informações necessárias para iniciar uma instância. Pode ser considerado um snapshot para recriação de instância. O EC2 Snapshot é o ponto para novos volumes ou backup. Existem três categorias de AMIs:
 
 Community AMIs– generally you just select the operating system you want. It’s free to use.
 AWS Marketplace AMIs– pay to use, generally come packaged with additional, licensed software.
 My AMIs– AMIs that you create yourself.
-2.2. Compute: ECS (Elastic Container Service)
+
+## 2.2. Compute: ECS (Elastic Container Service)
 
 É um serviço de gerenciamento de contêineres altamente dimensionável e rápido que facilita a execução, a interrupção e o gerenciamento de contêineres do Docker em um cluster. Você pode hospedar seu cluster em uma infraestrutura sem servidor gerenciada pelo ECS ao iniciar seus serviços ou tarefas usando o tipo de inicialização Fargate. Para obter mais controle, você pode hospedar suas tarefas em um cluster de instâncias do EC2 gerenciado usando o tipo de inicialização EC2.
 
 
-2.3. Storage: EBS (Elastic Block Store)
+## 2.3. Storage: EBS (Elastic Block Store)
 
 É um serviço de armazenamento de blocos de alta performance, projetado para o uso com as instâncias do EC2, para workloads com alta taxa de transferência de dados e com transações em qualquer escala. EBS é o armazenamento utilizável somente com EC2.
 
@@ -556,7 +564,7 @@ Alterar os tipos de volume (com suporte a SSD incluem um volume projetado para a
 Ajustar a performance ou aumentar o tamanho do volume sem interromper seus aplicativos essenciais, assim terá armazenamento econômico quando precisar.
 Os volumes EBS são replicados em uma zona de disponibilidade (AZ) e podem ser facilmente escalonados para petabytes de dados. Além disso, é possível usar o EBS Snapshots com políticas de ciclo de vida automatizadas para fazer backup de seus volumes no Amazon S3 e, ao mesmo tempo, garantir a proteção geográfica de seus dados e da continuidade de negócios.
 
-2.4. Storage: Amazon S3 (Simple Storage Service)
+## 2.4. Storage: Amazon S3 (Simple Storage Service)
 
 É um serviço gerenciado de armazenamento na nuvem que utiliza APIs (ou endpoints de VPCs) para armazenar e recuperar dados. Armazena um número praticamente ilimitado de objetos (imagens, vídeos, logs, etc.). Também oferece acesso de baixa latência por HTTP ou HTTPS.
 
@@ -570,29 +578,32 @@ O S3 é um armazenamento de objetos, você cria objetos, não arquivos. Também 
 
 O S3 usa um espaço para nome global , porém ao criar os buckets em uma região, os dados nunca saem dessa região, a menos que sejam explicitamente configurados com o CRR (Cross-region replication). Com o lifecycle management, você pode definir regras para transferir objetos entre classes de armazenamento em intervalos de tempo definidos.
 
-2.5. STORAGE: S3 GLACIER
+# 2.5. STORAGE: S3 GLACIER
+
 O Amazon S3 Glacier e o S3 Glacier Deep Archive são classes de armazenamento em nuvem do Amazon S3 seguro, resiliente e de custo extremamente baixo para arquivamento de dados e backups de longa duração. Essas classes foram projetadas para oferecer resiliência de 99,999999999% e disponibilizar recursos abrangentes de segurança e conformidade que podem ajudar a cumprir até mesmo os requisitos normativos mais rigorosos.
 
 A classe de armazenamento Amazon S3 Glacier disponibiliza três opções de recuperação:
 
-Recuperações aceleradas: retornam dados em 1 a 5 minutos; excelentes p/ arquivamento ativo.
+**Recuperações aceleradas:** retornam dados em 1 a 5 minutos; excelentes p/ arquivamento ativo.
+
 Recuperações padrão: são concluídas em 3 a 5 horas e funcionam bem para atividades em que o tempo não é tão crucial, como dados de backup, edição de mídia ou análises de longo prazo.
-Recuperações em massa: são a opção de recuperação mais barata, e retornam grandes quantidades de dados em 5 a 12 horas.
+
+**Recuperações em massa:** são a opção de recuperação mais barata, e retornam grandes quantidades de dados em 5 a 12 horas.
 O S3 Glacier Deep Archive oferece armazenamento de objetos seguro e durável para retenção de dados no longo prazo, acessados uma ou duas vezes por ano. É ideal para fornecer proteção offline dos ativos de dados mais importantes da sua empresa ou quando a retenção de dados no longo prazo é necessária para requisitos de política corporativa, contratuais ou de conformidade regulamentar.
 
-2.6. Storage: EFS (Elastic File System)
+# 2.6. Storage: EFS (Elastic File System)
 
 Fornece um sistema de arquivos NFS (Network File System) elástico, simples, escalável e totalmente gerenciado para uso com os serviços de nuvem AWS e os recursos local. Ele foi desenvolvido para escalar sob demanda até petabytes sem interromper os aplicativos, aumentando e diminuindo automaticamente à medida que você adiciona e remove arquivos, eliminando a necessidade de provisionar e gerenciar a capacidade com base no crescimento. Em NFS não pode ser instalado SO (sistema operacional).
 
-O Amazon EFS oferece duas classes de armazenamento:
+**O Amazon EFS oferece duas classes de armazenamento:**
 
 Standard
-Infrequent Access (EFS IA): fornece preço/performance com custo otimizado para arquivos que não são acessados todos os dias.
+**Infrequent Access (EFS IA):** fornece preço/performance com custo otimizado para arquivos que não são acessados todos os dias.
 Amazon EFS usa o NFS e é um sistema de armazenamento de arquivos. O Amazon EBS armazena em nível de bloco (para instâncias do EC2). E o S3 é um sistema de armazenamento de objetos.
 
 O Amazon EFS foi criado para fornecer acesso compartilhado massivamente paralelo para milhares de instâncias do Amazon EC2, permitindo que seus aplicativos alcancem altos níveis em taxas de transferências agregadas e IOPS com latências baixas e consistentes.
 
-2.7. Storage: AWS Storage Gateway
+# 2.7. Storage: AWS Storage Gateway
 
 É um serviço de armazenamento na nuvem híbrida que oferece acesso local a armazenamento na nuvem praticamente ilimitado. Os clientes usam o Storage Gateway para simplificar o gerenciamento de armazenamento e reduzir os custos de armazenamento na nuvem híbrida.
 
@@ -604,11 +615,11 @@ Para oferecer suporte a esses casos de uso, o serviço oferece três tipos difer
 
 A Gateway Virtual Tape Library pode ser usada com softwares de backup populares, como NetBackup, Backup Exec e Veeam. Usa um trocador de mídia virtual e unidades de fita.
 
-2.8. INFRA GLOBAL AWS
+# 2.8. INFRA GLOBAL AWS
 AWS Regions
 São regiões que hospedam uma ou mais Availability Zones. Ao escolher região, considere latência, minimizar custos e cumprir requisitos normativos. Pode ser implementado recursos em várias regiões (para melhor atender a sua empresa).
 
-Exemplo: servidor de deploy em uma região e base de clientes em outra. Ou os mesmos recursos em várias regiões, permitindo uma experiência global consistente (independente da localização do cliente).
+**Exemplo:** servidor de deploy em uma região e base de clientes em outra. Ou os mesmos recursos em várias regiões, permitindo uma experiência global consistente (independente da localização do cliente).
 
 As regiões são entidades completamente separadas. Os recursos em uma região não são replicados automaticamente a outras (e nem todos os serviços estão disponíveis em todas as regiões).
 
@@ -618,7 +629,7 @@ Conjunto de DCs dentro de uma região. São isoladas uma da outra, mas conectada
 Edge locations
 Hospedam CDNs (redes de entrega de conteúdos) – Amazon Cloudfront, que é utilizado para entregar conteúdo aos clientes, através de roteamentos ao ponto de presença mais próximo.
 
-2.9. Network: VPC (Virtual Private Cloud)
+# 2.9. Network: VPC (Virtual Private Cloud)
 
 O VPC permite provisionar uma seção da Nuvem AWS isolada logicamente na qual é possível executar recursos da AWS em uma rede virtual que você mesmo define. Você tem controle total sobre seu ambiente de redes virtuais, incluindo a seleção do seu próprio intervalo de endereços IP, a criação de sub-redes e a configuração de tabelas de rotas e gateways de rede. Você pode usar IPv4 e IPv6 na VPC para acessar recursos e aplicativos com segurança e facilidade.
 
@@ -628,23 +639,24 @@ Personalizar regras de roteamento e controle de tráfego de e/s
 Há vários produtos AWS que herdam e aproveitam a segurança incorporadas a VPC
 Amazon VPC é um serviço fundamental e se integra a vários serviços da AWS. Por exemplo, instâncias EC2 são implantadas na VPC.
 
-E possui as seguintes configurações:
+**E possui as seguintes configurações:**
 
 Uma lista de controle de acesso (ACL) à rede é uma camada de segurança opcional para sua VPC que funciona como firewall para controlar o tráfego de entrada e saída de uma ou mais sub-redes. Você pode configurar Network ACLs com regras semelhantes às dos grupos de segurança a fim de adicionar uma camada extra de segurança à sua VPC. Opera no nível da subnet.
 
-2.10. Network: AWS Direct Connect
+# 2.10. Network: AWS Direct Connect
 
 Permite conectar o ambiente AWS ao DC (ou escritório local) através de uma conexão dedicada de alta velocidade e baixa latência, que bypass os provedores de serviços de Internet em seu caminho de rede.
 
 Um local do AWS Direct Connect fornece acesso ao AWS na região à qual está associado e também a outras regiões dos EUA. Permite particionar logicamente as conexões de fibra ótica em várias conexões lógicas chamadas VLAN (Virtual Local Area Networks).
 
-Benefits:
+**Benefits:**
 
 Reduce cost when using large volumes of traffic
 Increase reliability (predictable performance)
 Increase bandwidth (predictable bandwidth)
 Decrease latency
-2.11. Segurança AWS
+
+# 2.11. Segurança AWS
 
 Os grupos de segurança funcionam como um firewall integrado para seus servidores virtuais. Com isso, você tem total controle sobre o nível de acesso das suas instâncias.
 
@@ -652,8 +664,8 @@ Método para filtrar o tráfego das suas instâncias
 As instâncias podem ser totalmente privada até totalmente pública
 Regras para arquiteturas multicamadas
 
-3. INTEGRATED SERVICES
-3.1. ELB (Elastic Load Balancing)
+# 3. INTEGRATED SERVICES
+## 3.1. ELB (Elastic Load Balancing)
 
 Distribui automaticamente o tráfego de entrada de aplicativos entre diversos destinos, como instâncias do Amazon EC2, contêineres, endereços IP e funções Lambda. O serviço pode lidar com a carga variável de tráfego dos aplicativos em uma única zona de disponibilidade ou em diversas zonas de disponibilidade.
 
@@ -664,7 +676,7 @@ Network Load Balancer (NLB): atua na camada 4 e roteia conexões com base nos da
 Classic Load Balancer (CLB): fornece balanceamento de carga básico nas camadas 4 e 7. Processam o tráfego nos níveis TCP, SSL, HTTP e HTTPS (camadas 4 e 7)
 O ELB pode distribuir o tráfego recebido pelas instâncias do Amazon EC2 em uma única AZ ou em várias AZs, mas não entre regiões. É usado para distribuir a carga e introduzir tolerância a falhas distribuindo conexões entre instâncias do EC2.
 
-3.2. Auto scaling
+# 3.2. Auto scaling
 
 Ajuda a garantir o número correto de instâncias do EC2 disponíveis para processar a carga dos aplicativos. Permite adicionar e remover instâncias de acordo com as condições especificadas.
 
@@ -675,7 +687,7 @@ Os componentes do Auto Scaling são:
 
 No Auto Scaling dinâmico, pode criar alarmes no CloudWatch, com base nas informações de performance de suas instâncias EC2 ou de um load balancer.
 
-Scaling vertically: através do aumento de um recurso individual, por exemplo, atualizando um servidor com um disco rígido maior ou uma CPU mais rápida.
+**Scaling vertically:** através do aumento de um recurso individual, por exemplo, atualizando um servidor com um disco rígido maior ou uma CPU mais rápida.
 
 Scaling horizontal: através do aumento no número de recursos, por exemplo, adicionando mais discos rígidos a uma array de armazenamento ou mais servidores para suportar um aplicativo).
 
