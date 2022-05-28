@@ -522,7 +522,8 @@ Por ser capaz de aprender e adaptar-se rapidamente as mudanças (reduz o custo d
 Riscos de segurança por permitir testar com frequência e efetuar correções rápidas
 Escalabilidade
 
-Redimensionar seus recursos conforme necessário
+**_Redimensionar seus recursos conforme necessário_**
+
 Confiabilidade
 
 Capacidade de um sistema se recuperar de falhas de infraestrutura ou serviço
